@@ -1,44 +1,81 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <!-- Basic Page Needs -->
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title>Rano - Landing Page HTML Templates</title>
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- REVOLUTION LAYERS STYLES -->
+    <link href="~/revolution/css/layers.css" rel="stylesheet" />
+    <link href="~/revolution/css/settings.css" rel="stylesheet" />
+    <!-- Boostrap style -->
+    <link href="~/Content/stylesheet/bootstrap.css" rel="stylesheet" />
+    <!-- Icommon icon -->
+    <link href="~/Content/stylesheet/icommon.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="~/Content/stylesheet/style.css" rel="stylesheet" />
+    <!-- Colors -->
+    <link href="~/Content/stylesheet/colors/color1.css" rel="stylesheet" />
+    <!-- Responsive -->
+    <link href="~/Content/stylesheet/responsive.css" rel="stylesheet" />
+    <!-- Carousel -->
+    <link href="~/Content/stylesheet/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/Content/stylesheet/owl.theme.default.min.css" rel="stylesheet" />
+    <!-- Flipster -->
+    <link href="~/Content/stylesheet/flipsternavtabs.css" rel="stylesheet" />
+    <link href="~/Content/stylesheet/jquery.flipster.min.css" rel="stylesheet" />
+    <!-- Animation Style -->
+    <link href="~/Content/stylesheet/animate.css" rel="stylesheet" />
+    <!-- FancyBox -->
+    <link href="~/Scripts/fancybox/jquery.fancybox.css" rel="stylesheet" media="screen" />
+    <!-- Favicon and touch icons  -->
+    <link href="~/Content/icons/icon.png" rel="shortcut icon">
+    <!-- Jquery -->
+    <script src="~/Scripts/js/jquery.min.js"></script>
+    <script src="~/Scripts/js/counter.js"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @RenderBody()
+    <!-- Fancybox -->
+    <script src="~/Scripts/fancybox/jquery.fancybox.js"></script>
+    <script src="~/Scripts/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="~/Scripts/js/jquery.easing.js"></script>
+    <script src="~/Scripts/js/jquery.cookie.js"></script>
+    <script src="~/Scripts/js/main.js"></script>
+    <!-- Counter Number -->
+    <script src="~/Scripts/js/jquery.waypoints.min.js"></script>
+    <script src="~/Scripts/js/jquery.counterup.js"></script>
+    <!-- flipster -->
+    <script src="~/Scripts/js/jquery.flipster.min.js"></script>
+    <!-- Revolution Slider -->
+    <script src="~/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="~/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="~/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="~/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="~/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="~/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="~/Scripts/js/rev-slider.js"></script>
+    <!-- Carousel -->
+    <script src="~/Scripts/js/owl.carousel.min.js"></script>
+    <script src="~/Scripts/js/owl-carousel.js"></script>
+
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
